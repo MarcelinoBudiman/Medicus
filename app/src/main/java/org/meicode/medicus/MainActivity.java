@@ -2,7 +2,9 @@ package org.meicode.medicus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -22,13 +24,24 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+        // set Animation
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
         logoImg = findViewById(R.id.logoImg);
         logoTxt = findViewById(R.id.logoTxt);
 
+        // Implement Animation
         logoImg.setAnimation(topAnimation);
         logoTxt.setAnimation(bottomAnimation);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, Home.class);
+                startActivity(intent);
+                finish(); // So the splash screen wont appear again
+            }
+        }, 4000);
     }
 }
