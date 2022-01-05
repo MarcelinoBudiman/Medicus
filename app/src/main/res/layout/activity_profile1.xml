@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ADD8E6"
+        android:padding="20dp">
+            <ImageView
+                android:id="@+id/profilePic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"/>
+<!--                android:src="@drawable/profile_image"> gambar profile orangnya-->
+
+            <TextView
+                android:id="@+id/fullname_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profilePic"
+                android:fontFamily="@font/alike"
+                android:includeFontPadding="false"
+                android:text="Ali Budiman Santika"
+                android:textColor="#000"
+                android:textSize="10sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Full Name"
+            android:id="@+id/full_name_profile"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+    <!--                android:drawableLeft="@drawable/username_small_icon"-->
+    <!--                android:drawablePadding="10dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_width="match_parent" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="ID Number"
+            android:id="@+id/idnumber"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+            <!--                android:drawableLeft="@drawable/username_small_icon"-->
+            <!--                android:drawablePadding="10dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_width="match_parent" />-->
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Phone Number"
+            android:id="@+id/phoneNo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+            <!--                android:drawableLeft="@drawable/username_small_icon"-->
+            <!--                android:drawablePadding="10dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_width="match_parent" />-->
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:background="#ADD8E6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:text="Save"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+
+</LinearLayout>
