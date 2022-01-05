@@ -3,9 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Learn_Android_Studio/Medicus/app/src/main/res/layout/activity_home.xml" value="0.11666666666666667" />
-        <entry key="..\:/Learn_Android_Studio/Medicus/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Learn_Android_Studio/Medicus/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Tessalonica Cindy/AndroidStudioProjects/Medicus/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Tessalonica Cindy/AndroidStudioProjects/Medicus/app/src/main/res/layout/activity_profile1.xml" value="0.1" />
       </map>
     </option>
   </component>
