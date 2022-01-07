@@ -30,4 +30,9 @@
             android:resource="@array/preloaded_fonts" />
     </application>
 
+    <!--check network permissions-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--check wifi state-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 </manifest>

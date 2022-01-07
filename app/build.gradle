@@ -1,9 +1,21 @@
 plugins {
     id 'com.android.application'
+    id 'com.huawei.agconnect'
 }
 
 android {
     compileSdk 31
+
+    signingConfigs {
+        release {
+            storeFile file('Key.jks')
+            keyAlias 'Key'
+            keyPassword '123456'
+            storePassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
 
     defaultConfig {
         applicationId "org.meicode.medicus"
@@ -18,7 +30,12 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
         }
     }
     compileOptions {
@@ -26,6 +43,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
+apply plugin: 'com.huawei.agconnect'
 
 dependencies {
 
@@ -35,4 +54,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
 }
+
