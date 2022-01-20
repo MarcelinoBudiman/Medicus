@@ -3,6 +3,7 @@ package org.meicode.medicus;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 
 import android.content.Intent;
@@ -28,6 +29,8 @@ public class Login extends AppCompatActivity {
     private static final int REQUEST_CODE_SIGN_IN = 1000;
     // Define the log tag.
     private static final String TAG = "Account";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,13 +87,11 @@ public class Login extends AppCompatActivity {
 
     private void dealWithResultOfSignIn(AuthAccount authAccount) {
 
-        Log.i(TAG, "display name:" + authAccount.getDisplayName());
-        Log.i(TAG, "photo uri string:" + authAccount.getAvatarUriString());
-        Log.i(TAG, "photo uri:" + authAccount.getAvatarUri());
-        Log.i(TAG, "email:" + authAccount.getEmail());
-        Log.i(TAG, "openid:" + authAccount.getOpenId());
-        Log.i(TAG, "unionid:" + authAccount.getUnionId());
-
+        User user = new User(authAccount.getDisplayName(), authAccount.getEmail());
+        Intent intent = new Intent(Login.this, Home.class);
+        intent.putExtra("User", user);
+        startActivity(intent);
+        finish();
     }
 
     @Override
