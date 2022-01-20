@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(MainActivity.this, Login.class);
                 startActivity(intent);
-                finish(); // So the splash screen wont appear again
+                finish(); // Jadi splash screennya ga keluar lg
             }
         }, 4000);
     }
