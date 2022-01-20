@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.meicode.medicus">
+    <!-- check network permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- check wifi state -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Medicus">
+        <activity
+            android:name=".BookingHistory"
+            android:exported="false" />
         <activity
             android:name=".Home"
             android:exported="false" />
@@ -29,10 +35,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-    <!--check network permissions-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--check wifi state-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
 </manifest>

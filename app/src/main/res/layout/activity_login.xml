@@ -14,15 +14,15 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/logoTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="155dp"
-        android:layout_marginTop="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
         android:fontFamily="@font/alike"
         android:text="Medicus"
         android:textColor="#FFFFFF"

@@ -17,7 +17,7 @@
 		"project_id":"737518067794073105",
 		"app_id":"105303047",
 		"api_key":"DAEDAIspAQVVt5Ob1spNxOutrbCgT1Isoh5PZM3GjX5jCqoYeQ8VTADiPIZY7KlyxUv68VBYpY7LghkbdgRnkQ7cxc6LEEdOaFHQRA==",
-		"package_name":"com.medicus.huawei"
+		"package_name":"org.meicode.medicus"
 	},
 	"oauth_client":{
 		"client_id":"105303047",
@@ -25,17 +25,17 @@
 	},
 	"app_info":{
 		"app_id":"105303047",
-		"package_name":"com.medicus.huawei"
+		"package_name":"org.meicode.medicus"
 	},
 	"configuration_version":"3.0",
 	"appInfos":[
 		{
-			"package_name":"com.medicus.huawei",
+			"package_name":"org.meicode.medicus",
 			"client":{
 				"app_id":"105303047"
 			},
 			"app_info":{
-				"package_name":"com.medicus.huawei",
+				"package_name":"org.meicode.medicus",
 				"app_id":"105303047"
 			},
 			"oauth_client":{
