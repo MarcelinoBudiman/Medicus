@@ -4,7 +4,7 @@ dependencyResolutionManagement {
         google()
         maven {url 'https://developer.huawei.com/repo/'}
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+
     }
 }
 rootProject.name = "Medicus"
