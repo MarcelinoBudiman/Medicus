@@ -6,8 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
+
 import android.widget.GridView;
+
+import com.huawei.hms.ads.HwAds;
+import com.huawei.hms.ads.banner.BannerView;
 
 public class Home extends AppCompatActivity {
 
@@ -15,19 +18,19 @@ public class Home extends AppCompatActivity {
             R.drawable.logo, R.drawable.logo
     };
     String array2[] = {
-            "Food", "Drink", "Snacks", "Top Up"
+            "Book Now","Book History"
     };
 
-    Button basketButton;
-
-
     GridView gridView;
+    private BannerView bannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        HwAds.init(this);
 
+        bannerView = findViewById(R.id.adview);
         gridView = findViewById(R.id.gridview);
 
         GridAdaptor gridAdaptor = new GridAdaptor(array2, array, this);
@@ -37,7 +40,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    //masuk ke BookNow
+                    startActivity(new Intent(Home.this,BookNow.class));
                 }
                 if (position == 1) {
                     //masuk ke BookHistory

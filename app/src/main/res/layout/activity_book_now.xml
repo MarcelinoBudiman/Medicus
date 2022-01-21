@@ -15,16 +15,17 @@
         android:padding="20dp">
 
         <TextView
+            android:id="@+id/dokter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Masukkan nama Dokter"
+            android:text="Nama Dokter"
             android:layout_marginRight="20px"
             tools:context=".FrmActivity" />
 
         <EditText
-            android:id="@+id/nama_pasien"
+            android:id="@+id/nama_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/textView2"
@@ -43,44 +44,17 @@
         android:padding="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Masukkan Rumah sakit"
-            android:layout_marginRight="20px"
-            tools:context=".FrmActivity" />
-
-        <EditText
             android:id="@+id/rumah_sakit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView2"
-            android:layout_toRightOf="@+id/textView2"
-            android:background="#CCCCCC"
-            android:inputType="textPersonName">
-
-        </EditText>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Masukkan nomor telphone"
+            android:text="Rumah sakit tujuan "
             android:layout_marginRight="20px"
             tools:context=".FrmActivity" />
 
         <EditText
-            android:id="@+id/nomor_telphone"
+            android:id="@+id/nama_rumah_sakit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/textView2"
@@ -91,6 +65,8 @@
         </EditText>
 
     </LinearLayout>
+
+
 
 
     <LinearLayout
@@ -103,7 +79,7 @@
         <DatePicker
             android:id="@+id/date_picker"
             android:layout_width="wrap_content"
-            android:layout_height="322dp"
+            android:layout_height="391dp"
             android:layout_weight="4"
             android:calendarViewShown="true"
             android:spinnersShown="false" />
@@ -120,7 +96,7 @@
             android:layout_width="600px"
             android:layout_height="wrap_content"
             android:text="Button"
-            android:onClick="submit_btn"/>
+            />
 
     </LinearLayout>
 

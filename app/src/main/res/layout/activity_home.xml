@@ -8,6 +8,11 @@
     android:orientation="vertical">
 
 
+<com.huawei.hms.ads.banner.BannerView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hiad_70_dp"
+    android:id="@+id/adview"/>
+
     <GridView
         android:id="@+id/gridview"
         android:layout_marginTop="10dp"
