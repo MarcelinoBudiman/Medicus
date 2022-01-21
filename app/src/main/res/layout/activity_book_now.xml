@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Masukkan nama Pasien"
+            android:text="Masukkan nama Dokter"
             android:layout_marginRight="20px"
             tools:context=".FrmActivity" />
 
@@ -103,18 +103,24 @@
         <DatePicker
             android:id="@+id/date_picker"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="322dp"
             android:layout_weight="4"
             android:calendarViewShown="true"
             android:spinnersShown="false" />
 
-        <Button
-            android:id="@+id/date_time_set"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:text="Set"
-            android:layout_height="0dp" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="submit_btn"/>
 
     </LinearLayout>
 
