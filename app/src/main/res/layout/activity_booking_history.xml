@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonBook" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/bookHistory"
+        android:id="@+id/bookHistoryRecycler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
