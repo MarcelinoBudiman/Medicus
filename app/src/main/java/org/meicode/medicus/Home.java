@@ -14,6 +14,8 @@ import com.huawei.hms.ads.banner.BannerView;
 
 public class Home extends AppCompatActivity {
 
+    User user;
+
     int array[] = {
             R.drawable.logo, R.drawable.logo
     };
@@ -33,6 +35,9 @@ public class Home extends AppCompatActivity {
         bannerView = findViewById(R.id.adview);
         gridView = findViewById(R.id.gridview);
 
+
+        user = (User) getIntent().getSerializableExtra("User");
+
         GridAdaptor gridAdaptor = new GridAdaptor(array2, array, this);
         gridView.setAdapter(gridAdaptor);
 
@@ -40,10 +45,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    startActivity(new Intent(Home.this,BookNow.class));
+                    Intent intent = new Intent(Home.this,BookNow.class);
+                    intent.putExtra("User", user);
+                    startActivity(intent);
                 }
                 if (position == 1) {
                     //masuk ke BookHistory
+                    Intent intent = new Intent(Home.this,BookingHistory.class);
+                    intent.putExtra("User", user);
+                    startActivity(intent);
                 }
             }
         });
