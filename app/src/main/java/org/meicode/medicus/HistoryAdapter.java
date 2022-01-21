@@ -19,7 +19,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     ArrayList<String> date = new ArrayList<String>();
 
     public HistoryAdapter(Context context, String name, String h, String d){
-
         c = context;
         doctorName.add(name);
         hospital.add(h);

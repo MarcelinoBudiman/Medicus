@@ -14,10 +14,10 @@ public class GridAdaptor extends BaseAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public GridAdaptor(String[] text, int[] image, Context context) {
+    public GridAdaptor(Context c, String[] text, int[] image) {
         this.text = text;
         this.image = image;
-        this.context = context;
+        this.context = c;
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
     }

@@ -16,12 +16,8 @@ public class Home extends AppCompatActivity {
 
     User user;
 
-    int array[] = {
-            R.drawable.logo, R.drawable.logo,R.drawable.logo
-    };
-    String array2[] = {
-            "Book Now","Book History","Profile"
-    };
+    int array[] = {R.drawable.logo, R.drawable.logo,R.drawable.logo};
+    String array2[] = {"Book Now","Book History","Profile"};
 
     GridView gridView;
     private BannerView bannerView;
@@ -29,7 +25,7 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         HwAds.init(this);
 
         bannerView = findViewById(R.id.adview);
@@ -38,12 +34,12 @@ public class Home extends AppCompatActivity {
 
         user = (User) getIntent().getSerializableExtra("User");
 
-        GridAdaptor gridAdaptor = new GridAdaptor(array2, array, this);
+        GridAdaptor gridAdaptor = new GridAdaptor(this, array2, array);
         gridView.setAdapter(gridAdaptor);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView parent, View view, int position, long id) {
                 if (position == 0) {
                     Intent intent = new Intent(Home.this,BookNow.class);
                     intent.putExtra("User", user);
@@ -56,7 +52,7 @@ public class Home extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if (position == 2) {
-                    //masuk ke BookHistory
+                    //masuk ke Profile
                     Intent intent = new Intent(Home.this,Profile.class);
                     intent.putExtra("User", user);
                     startActivity(intent);

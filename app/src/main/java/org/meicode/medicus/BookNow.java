@@ -20,7 +20,7 @@ public class BookNow extends AppCompatActivity {
 //    final View dialogView = View.inflate(activity, R.layout.activity_book_now, null);]
     private EditText nama_dokter,rumah_sakit;
     private DatePicker date;
-    private Button btn1;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,9 @@ public class BookNow extends AppCompatActivity {
         nama_dokter = findViewById(R.id.nama_dokter);
         rumah_sakit = findViewById(R.id.nama_rumah_sakit);
         date = findViewById(R.id.date_picker);
-        btn1 = findViewById(R.id.button);
+        btn = findViewById(R.id.buttonSubmit);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String dokter = nama_dokter.getText().toString();
