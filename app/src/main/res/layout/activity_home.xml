@@ -11,7 +11,7 @@
 <com.huawei.hms.ads.banner.BannerView
     android:layout_width="match_parent"
     android:layout_height="@dimen/hiad_70_dp"
-    android:id="@+id/adview"/>
+    android:id="@+id/adview" />
 
     <GridView
         android:id="@+id/gridview"

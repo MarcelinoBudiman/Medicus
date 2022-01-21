@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 
 import android.widget.GridView;
 
+import com.huawei.hms.ads.AdParam;
 import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.ads.banner.BannerView;
 
@@ -29,6 +30,9 @@ public class Home extends AppCompatActivity {
         HwAds.init(this);
 
         bannerView = findViewById(R.id.adview);
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
+
         gridView = findViewById(R.id.gridview);
 
 
