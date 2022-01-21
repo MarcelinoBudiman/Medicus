@@ -17,10 +17,10 @@ public class Home extends AppCompatActivity {
     User user;
 
     int array[] = {
-            R.drawable.logo, R.drawable.logo
+            R.drawable.logo, R.drawable.logo,R.drawable.logo
     };
     String array2[] = {
-            "Book Now","Book History"
+            "Book Now","Book History","Profile"
     };
 
     GridView gridView;
@@ -52,6 +52,12 @@ public class Home extends AppCompatActivity {
                 if (position == 1) {
                     //masuk ke BookHistory
                     Intent intent = new Intent(Home.this,BookingHistory.class);
+                    intent.putExtra("User", user);
+                    startActivity(intent);
+                }
+                if (position == 2) {
+                    //masuk ke BookHistory
+                    Intent intent = new Intent(Home.this,Profile.class);
                     intent.putExtra("User", user);
                     startActivity(intent);
                 }
