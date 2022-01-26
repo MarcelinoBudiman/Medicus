@@ -19,7 +19,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato_bold"
                 android:text="11 November 2022"
-                android:textColor="#f00d84" />
+                android:layout_marginLeft="100dp"
+                android:textColor="#f00d84"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/lblDoctorName"

@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
 import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.ads.banner.BannerView;
 
@@ -29,7 +30,10 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         HwAds.init(this);
 
-        bannerView = findViewById(R.id.adview);
+        bannerView = findViewById(R.id.adView);
+        bannerView.setAdId("testw6vs28auh3");
+        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_360_57);
+        bannerView.setBannerRefresh(60);
         AdParam adParam = new AdParam.Builder().build();
         bannerView.loadAd(adParam);
 

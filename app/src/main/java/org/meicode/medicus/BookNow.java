@@ -14,13 +14,15 @@ import android.widget.EditText;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Vector;
 
 public class BookNow extends AppCompatActivity {
 //    private Context activity;
 //    final View dialogView = View.inflate(activity, R.layout.activity_book_now, null);]
-    private EditText nama_dokter,rumah_sakit;
-    private DatePicker date;
-    private Button btn;
+    EditText nama_dokter,rumah_sakit;
+    DatePicker date;
+    Button btn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class BookNow extends AppCompatActivity {
         nama_dokter = findViewById(R.id.nama_dokter);
         rumah_sakit = findViewById(R.id.nama_rumah_sakit);
         date = findViewById(R.id.date_picker);
-        btn = findViewById(R.id.buttonSubmit);
+        btn = (Button) findViewById(R.id.buttonSubmit);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +43,13 @@ public class BookNow extends AppCompatActivity {
                 int year = date.getYear();
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(year,month,day);
-                SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyy");
-                String dateFinal = format.format(calendar);
+                SimpleDateFormat formatDate = new SimpleDateFormat("dd-mm-yyy");
+                String dateFinal = formatDate.format(calendar.getTime());
+
+                Form book = new Form(dokter,rumah,dateFinal);
 
                 Intent intent = new Intent(BookNow.this, BookingHistory.class);
-                intent.putExtra("keydokter",dokter);
-                intent.putExtra("keyrumahsakit", rumah);
-                intent.putExtra("keycalendar", dateFinal);
+                intent.putExtra("BookData", book);
                 startActivity(intent);
             }
         });

@@ -10,19 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHolder> {
 
     Context c;
-    ArrayList<String> doctorName = new ArrayList<String>();
-    ArrayList<String> hospital = new ArrayList<String>();
-    ArrayList<String> date = new ArrayList<String>();
+    Vector<Form> bookingData;
 
-    public HistoryAdapter(Context context, String name, String h, String d){
-        c = context;
-        doctorName.add(name);
-        hospital.add(h);
-        date.add(d);
+    public HistoryAdapter(Context context, Vector<Form> data){
+        this.bookingData = data;
+        this.c = context;
     }
 
     @NonNull
@@ -35,16 +32,18 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull HistoryAdapter.MyViewHolder holder, int position) {
-        holder.date.setText(date.get(position));
+        //String test = position + "";
+        holder.date.setText(bookingData.get(position).getTanggal());
+        //holder.date.setText(test);
         holder.lblDoctor.setText("Appointment With:");
-        holder.doctorName.setText(doctorName.get(position));
+        holder.doctorName.setText(bookingData.get(position).getNamaDokter());
         holder.lblHospital.setText("Appointment At:");
-        holder.hospital.setText(hospital.get(position));
+        holder.hospital.setText(bookingData.get(position).getRumahSakit());
     }
 
     @Override
     public int getItemCount() {
-        return doctorName.size()-1;
+        return bookingData.size()-1;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -56,7 +55,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
             date = itemView.findViewById(R.id.lblDate);
             lblDoctor = itemView.findViewById(R.id.lblDoctorName);
             doctorName = itemView.findViewById(R.id.insDoctorName);
-            lblHospital = itemView.findViewById(R.id.insDoctorName);
+            lblHospital = itemView.findViewById(R.id.lblHospital);
             hospital = itemView.findViewById(R.id.insHospital);
         }
     }
