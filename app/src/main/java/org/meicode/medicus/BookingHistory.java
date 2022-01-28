@@ -32,7 +32,7 @@ public class BookingHistory extends AppCompatActivity {
         bookNow = findViewById(R.id.buttonBook);
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2022,01,28);
+        calendar.set(2022,1,28);
         SimpleDateFormat formatDate = new SimpleDateFormat("dd-mm-yyy");
         String dateFinal = formatDate.format(calendar.getTime());
 
@@ -67,8 +67,6 @@ public class BookingHistory extends AppCompatActivity {
         if (book2 != null){
             bookingData.add(book2);
         }
-
-        Toast.makeText(this, size.toString(), Toast.LENGTH_SHORT).show();
 
         HistoryAdapter adapter = new HistoryAdapter(this, bookingData);
         recycler.setAdapter(adapter);

@@ -17,23 +17,24 @@
 
     <TextView
         android:id="@+id/lblHistory"
-        android:paddingTop="20dp"
-        android:paddingStart="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_bold"
+        android:paddingStart="10dp"
+        android:paddingTop="20dp"
         android:text="Booking History"
-        android:textSize="20dp"
         android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@+id/buttonBook" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/bookHistoryRecycler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
+        android:layout_width="315dp"
+        android:layout_height="473dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/lblHistory"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lblHistory"
         app:layout_constraintTop_toBottomOf="@+id/lblHistory" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
